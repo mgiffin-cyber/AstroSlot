@@ -1,25 +1,7 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Main from "../components/Main.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+let title = "About";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Slot - About</title>
-	</head>
-	<body>
-		<div id="container">
-			<Header />
-			<Main>
-                <p>About - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolor!</p>
-            </Main>
-			<Footer />
-		</div>
-	</body>
-</html>
+<BaseLayout title = {title}>
+<p>About - Lorem ipsum dolor sit amet consectetur adipisicing elit. A quia pariatur cupiditate maiores aliquid voluptate provident repellendus? Quaerat amet ducimus dicta quasi! Praesentium, cum distinctio. Expedita sapiente aut assumenda mollitia quidem provident nisi veniam repellat autem aspernatur, perspiciatis culpa repellendus laborum officiis non sunt ratione est eaque laudantium quas ab!</p>
+</BaseLayout>
