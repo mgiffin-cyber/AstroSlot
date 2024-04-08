@@ -16,7 +16,7 @@ let {title} = Astro.props;
 	</head>
 	<body>
 		<div id="container">
-			<Header />
+			<Header header={title} />
 			<Main>
 				<slot />
 			</Main>
