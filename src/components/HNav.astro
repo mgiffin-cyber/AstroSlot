@@ -1,12 +1,39 @@
 ---
 const links = ["Home", "About", "Gallery", "Contact"];
+
+// Create object variable
+const navData = [
+    {
+        href:"/",
+        text:"Home",
+        divider:" | ",
+    }, 
+    {
+        href:"/about/",
+        text:"About",
+        divider:" | ",
+    }, 
+    {
+        href:"/gallery/",
+        text:"Gallery",
+        divider:" | ",
+    }, 
+    {
+        href:"/contact/",
+        text:"Contact",
+    }];
 ---
 
 <!-- <nav><a href="/">Home</a> | <a href="/about/">About</a> | <a href="/gallery/">Gallery</a></nav> -->
 
-<nav>
+<!-- <nav>
     <ul>
         {links.map((link) => <li> {link} </li>)}
+    </ul>
+</nav> -->
+<nav>
+    <ul>
+        {navData.map((item) => (<li> <a href={item.href}>{item.text}</a> {item.divider} </li>))}
     </ul>
 </nav>
 <style>
@@ -16,9 +43,15 @@ const links = ["Home", "About", "Gallery", "Contact"];
         justify-content: center;
         padding: 1rem;
         background-color: red;
+        flex-direction: column;
     }
     li{
         padding: 0.5rem;
         background-color: pink;
+    }
+    @media screen and (min-width: 600px){
+        ul{
+            flex-direction: row;
+        }
     }
 </style>
