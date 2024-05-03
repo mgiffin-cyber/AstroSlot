@@ -33,7 +33,15 @@ const navData = [
 </nav> -->
 <nav>
     <ul>
-        {navData.map((item) => (<li> <a href={item.href}>{item.text}</a> {item.divider} </li>))}
+        {navData.map((item) => (
+        <>
+        <li> 
+            <a href={item.href}>{item.text}</a>
+        </li>
+        <span class="divider">{item.divider}</span>
+        </>
+        ))
+    }
     </ul>
 </nav>
 <style>
@@ -42,16 +50,23 @@ const navData = [
         display: flex;
         justify-content: center;
         padding: 1rem;
-        background-color: red;
+        background-color: white;
         flex-direction: column;
     }
     li{
         padding: 0.5rem;
-        background-color: pink;
+        background-color: white;
+        padding: 0 0.5rem
+    }
+    span.divider{
+        display: none;
     }
     @media screen and (min-width: 600px){
         ul{
             flex-direction: row;
+        }
+        span.divider{
+            display: block;
         }
     }
 </style>
