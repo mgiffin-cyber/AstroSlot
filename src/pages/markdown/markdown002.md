@@ -1,7 +1,9 @@
 ---
 title: "Markdown Demo Part 2"
 date: 2024-05-15
-layout: "../../layouts/MarkdownLayout.astro"
+author: "Macy Giffin"
+decription: "Markdown with Layout Path"
+layout: "../../layouts/BaseLayout.astro"
 ---
 
 # Markdown Demo Part 2
