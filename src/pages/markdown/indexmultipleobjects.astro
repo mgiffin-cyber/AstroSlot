@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+let title = "Markdown";
+
+const locations = [
+    {url:"https://yahoo.com", text:"Yahoo"},
+    {url:"https://google.com", text:"Google"},
+    {url:"https://espn.com", text:"ESPN"}
+];
+---
+<BaseLayout title={title}>
+<h2>Multiple Objects</h2>
+
+<ul>
+    {
+    locations.map((location) => (
+    <li>
+        <a href={location.url}>{location.text}</a>
+    </li>
+    ))
+}
+</ul>
+</BaseLayout>
